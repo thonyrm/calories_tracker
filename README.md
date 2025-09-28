@@ -1,69 +1,78 @@
-# React + TypeScript + Vite
+#  Calorie Tracker con React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación práctica de **Rastreador de Calorías**, desarrollada con **React + TypeScript** para reforzar conceptos clave de hooks, patrones de estado y buenas prácticas en desarrollo frontend.
+La app permite:
 
-Currently, two official plugins are available:
+- **Registrar calorias consumidas**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Registrar calorias perdidas**
 
-## Expanding the ESLint configuration
+- **Ver resumen ejecutivo**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Visualizar registros de las actividades**
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Editar o eliminar registros**
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Características principales
+
+- 💸 **Visualización de calorías**: Listado dinámico con el registro de todas las actividades realizadas. 
+- ⚡ **Rendimiento optimizado** con `useMemo` para cálculos derivados.  
+- 🧩 **Gestión de estado avanzada** con  `useReducer`.  
+- 🌍 **Estado global centralizado** con `useContext`.  
+- 🎨 **UI responsive y moderna** con  **TailwindCSS**.  
+
+---
+
+**Hooks de React aplicados:**
+- `useState` → Manejo de estados locales (inputs, selección de categorias, etc).  
+- `useReducer` → Lógica del controlador de calorías (añadir, quitar, actualizar ).  
+- `useMemo` → Optimización en cálculos de totales(totales).  
+- `useContext` → Estado global sin necesidad de prop drilling..
+---
+
+## 📂 Estructura del proyecto
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+├─ components/ # Componentes reutilizables 
+├─ context/ # Lógica para manejar el estado global ActivityContext
+├─ helpers/ # Funciones auxiliares
+├─ Hooks/ # Custom hooks (useActivity)
+├─ reducer/ # Reducer principal  (activityReducer)
+├─ types/ # Definición de types (Category, Expenses, etc.)
+├─ data/ # Data local (categorías.)
+└─ App.jsx # Punto de entrada principal
 ```
+---
+
+## 🛠️ Tecnologías utilizadas
+- [Vite](https://vitejs.dev/) — entorno de desarrollo rápido.
+- [React](https://react.dev/) — librería principal.
+- [UUID](https://www.npmjs.com/package/uuid) — Identificadores únicos.
+
+
+---
+
+## 🔧 Setup del proyecto
+
+1. Clonar el repositorio:
+   ```
+   git clone https://github.com/thonyrm/calories_tracker.git
+   ```
+2. Instalar dependencias:
+
+    ```
+    npm install
+    ```
+
+3. Ejecutar en modo desarrollo:
+    ```
+    npm run dev
+    ```
+
+---
+
+## 🌐 Demo en línea
+Puedes probar el proyecto funcionando aquí:  
+👉 [Calorie Tracker en Netlify](https:///)
