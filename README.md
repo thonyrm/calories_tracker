@@ -75,4 +75,4 @@ La app permite:
 
 ## 🌐 Demo en línea
 Puedes probar el proyecto funcionando aquí:  
-👉 [Calorie Tracker en Netlify](https://https://calories-tracker-thonydev.netlify.app/)
+👉 [Calorie Tracker en Netlify](https://calories-tracker-thonydev.netlify.app/)
