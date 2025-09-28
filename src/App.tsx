@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useReducer  } from "react"
+import { useEffect, useMemo } from "react"
 import Form from "@/components/Form"
 import ActivityList from "@/components/ActivityList"
 import CalorieTracker from "@/components/CalorieTracker"
