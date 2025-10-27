@@ -70,7 +70,6 @@ La app permite:
     ```
     npm run dev
     ```
-
 ---
 
 ## 🌐 Demo en línea
