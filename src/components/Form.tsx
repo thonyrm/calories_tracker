@@ -30,9 +30,7 @@ export default function Form() {
         setActivity({
             ...activity,
             [e.target.id] : isNumberField ? +e.target.value : e.target.value
-        })
-        
-        
+        })     
     }
 
     const isValidActivity = () => {
@@ -68,7 +66,6 @@ export default function Form() {
                                 value={category.id}
                             >
                                 {category.name}
-
                             </option>
                         ))
 
@@ -103,9 +100,7 @@ export default function Form() {
                 className="bg-sky-900 hover:bg-sky-950 p-2.5 rounded-lg text-white font-bold cursor-pointer w-full uppercase disabled:opacity-10"
                 value= {activity.category === 1 ? "Guardar Comida" : "Guardar Ejercicio"}
                 disabled= {!isValidActivity()}
-               
             />
-
         </form>
     )
 }
