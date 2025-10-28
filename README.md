@@ -51,7 +51,6 @@ La app permite:
 - [React](https://react.dev/) — librería principal.
 - [UUID](https://www.npmjs.com/package/uuid) — Identificadores únicos.
 
-
 ---
 
 ## 🔧 Setup del proyecto
