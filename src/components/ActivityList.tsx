@@ -38,7 +38,6 @@ export default function ActivityList() {
                             >
                                 <XCircleIcon className="h-8 w-8 text-red-500 cursor-pointer "/> 
                             </button>
-
                         </div>
                     </div>
                 ))
